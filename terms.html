@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Term & Condition</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="/"><img src="terasaver.png"/></a></div>
+    </header>
+    <div class="container">
+        <h2>General Terms and Conditions</h2>
+        <p>These Terms of Use constitute a legally binding agreement between you. Whether in person or on behalf of an
+            entity ("you") and staying offline regarding your access to , as well as any other form of media, mobile application, media channel, mobile
+            web or related related or associated sites. You agree that by reading the website, you have read and agree
+            to be bound by all these terms of use. If you do not agree to all of these Terms of Use, then you are
+            expressly prohibited from using the Site and must stop using it immediately.
+
+            Additional terms or documents that may be posted on the Site from time to time are clearly incorporated
+            herein by reference. We reserve the right, in our sole discretion, to change or modify these Terms of Use at
+            any time and for any reason. We will notify you of any changes by updating the "Last Updated" date in
+            accordance with these Terms of Use and you will be denied any right to receive specific notice of any
+            changes. . We will change the rules governing your use of our services, and by continuing to use the
+            services after such changes take effect, you agree to the changed terms of use by your continued use of the
+            site as of the date these changed terms of use are posted.
+
+            The information on the Site is not intended for distribution or use by any person or entity in any
+            jurisdiction or country where such dissemination or use is contrary to any law or regulation. Therefore, if
+            you choose to access sites outside of India, please be aware that you do so on your own initiative and that
+            you are solely responsible for compliance with all applicable local laws. All users who are minors in the
+            jurisdiction in which they reside (usually under the age of 18) must have permission to use the site and
+            must be directly controlled by their provider. If you are a minor, you must read your parent or guardian and
+            agree to these terms of use before using the site.</p>
+    </div>
+
+    
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+    </script>
+</body>
+
+</html>

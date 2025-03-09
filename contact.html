@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us & Contact - Video Downloader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .logo img {
+            width: fit-content;
+            max-width: 100px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0073e6;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #0073e6;
+            font-weight: bold;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #005bb5;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="/"><img src="terasaver.png"/></a></div>
+    </header>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to <span class="highlight">Video Downloader</span>, your ultimate solution for downloading your
+            favorite videos quickly and easily.</p>
+        <p>Our platform is designed to provide a fast, secure, and user-friendly experience for downloading videos from
+            various sources.</p>
+
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="/"><img src="terasaver.png"/></a></div>
+    </header>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to <span class="highlight">Video Downloader</span>, your ultimate solution for downloading your
+            favorite videos quickly and easily.</p>
+        <p>Our platform is designed to provide a fast, secure, and user-friendly experience for downloading videos from
+            various sources.</p>
+        <div class="features">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Fast and secure downloads</li>
+                <li>Support for multiple video platforms</li>
+                <li>Easy-to-use interface</li>
+                <li>Completely free and no registration required</li>
+            </ul>
+        </div>
+        <p>Join thousands of users who trust us for their video downloading needs.</p>
+        <a href="#" class="cta">Start Downloading</a>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+    </script>
+
+</body>
+
+</html>
